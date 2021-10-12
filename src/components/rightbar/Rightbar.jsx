@@ -3,7 +3,7 @@ import { Users } from "../../dummyData";
 import Online from "../online/Online";
 
 export default function Rightbar({ user }) {
-  const PF= process.env.REACT_APP_PUBLIC_FOLDER;
+  const PF = process.env.REACT_APP_PUBLIC_FOLDER;
   const HomeRightbar = () => {
     return (
       <>
@@ -40,7 +40,13 @@ export default function Rightbar({ user }) {
           </div>
           <div className="rightbarInfoItem">
             <span className="rightbarInfoKey">Relationship:</span>
-            <span className="rightbarInfoValue">{user.relationship ===1? "Single" : user.relationship===1? "Married": "" }</span>
+            <span className="rightbarInfoValue">
+              {user.relationship === 1
+                ? "Single"
+                : user.relationship === 1
+                ? "Married"
+                : ""}
+            </span>
           </div>
         </div>
         <h4 className="rightbarTitle">User friends</h4>
@@ -48,7 +54,8 @@ export default function Rightbar({ user }) {
           <div className="rightbarFollowing">
             <img
               src={`${PF}person/1.jpeg
-             `} alt=""
+             `}
+              alt=""
               className="rightbarFollowingImg"
             />
             <span className="rightbarFollowingName">John Carter</span>
@@ -56,7 +63,8 @@ export default function Rightbar({ user }) {
           <div className="rightbarFollowing">
             <img
               src={`${PF}person/2.jpeg
-             `} alt=""
+             `}
+              alt=""
               className="rightbarFollowingImg"
             />
             <span className="rightbarFollowingName">John Carter</span>
@@ -64,7 +72,8 @@ export default function Rightbar({ user }) {
           <div className="rightbarFollowing">
             <img
               src={`${PF}person/3.jpeg
-             `} alt=""
+             `}
+              alt=""
               className="rightbarFollowingImg"
             />
             <span className="rightbarFollowingName">John Carter</span>
@@ -72,7 +81,8 @@ export default function Rightbar({ user }) {
           <div className="rightbarFollowing">
             <img
               src={`${PF}person/4.jpeg
-             `} alt=""
+             `}
+              alt=""
               className="rightbarFollowingImg"
             />
             <span className="rightbarFollowingName">John Carter</span>
@@ -80,7 +90,8 @@ export default function Rightbar({ user }) {
           <div className="rightbarFollowing">
             <img
               src={`${PF}person/5.jpeg
-             `} alt=""
+             `}
+              alt=""
               className="rightbarFollowingImg"
             />
             <span className="rightbarFollowingName">John Carter</span>
@@ -88,7 +99,8 @@ export default function Rightbar({ user }) {
           <div className="rightbarFollowing">
             <img
               src={`${PF}person/6.jpeg
-             `} alt=""
+             `}
+              alt=""
               className="rightbarFollowingImg"
             />
             <span className="rightbarFollowingName">John Carter</span>

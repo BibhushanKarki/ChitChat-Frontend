@@ -1,6 +1,15 @@
+import { useRef } from "react";
 import "./register.css";
 
 export default function Register() {
+  const username = useRef();
+  const email = useRef();
+  const password = useRef();
+  const passwordAgain = useRef();
+
+  const handleClick = (e) => {
+    e.preventDefault();
+  };
   return (
     <div className="login">
       <div className="loginWrapper">
@@ -12,14 +21,32 @@ export default function Register() {
         </div>
         <div className="loginRight">
           <div className="loginBox">
-            <input placeholder="Username" className="loginInput" />
-            <input placeholder="Email" className="loginInput" />
-            <input placeholder="Password" className="loginInput" />
-            <input placeholder="Password Again" className="loginInput" />
+            <input
+              placeholder="Username"
+              className="loginInput"
+              required
+              ref={username}
+            />
+            <input
+              placeholder="Email"
+              className="loginInput"
+              required
+              ref={email}
+            />
+            <input
+              placeholder="Password"
+              className="loginInput"
+              required
+              ref={password}
+            />
+            <input
+              placeholder="Password Again"
+              className="loginInput"
+              required
+              ref={passwordAgain}
+            />
             <button className="loginButton">Sign Up</button>
-            <button className="loginRegisterButton">
-              Log into Account
-            </button>
+            <button className="loginRegisterButton">Log into Account</button>
           </div>
         </div>
       </div>
