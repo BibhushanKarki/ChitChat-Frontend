@@ -13,7 +13,6 @@ export default function Feed({username}) {
       ? await axios.get("/posts/profile/"+username) 
       : await axios.get("/posts/timeline/60ddd3055694fa34dc0f7919");
       setPosts(res.data)
-      
     };
     fetchPosts();
   }, [username])

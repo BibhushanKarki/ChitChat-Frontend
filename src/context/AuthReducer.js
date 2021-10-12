@@ -4,7 +4,7 @@ const AuthReducer=(state,action)=>{
             return{
                 ...state,
                 user:null,
-                isFetching:false,
+                isFetching:true,
                 erorr:false,
             };
 
